@@ -7,12 +7,26 @@
 body {
   background-color: rgb(224, 206, 200);
   font-family: sans-serif;
+  color: rgb(99, 43, 26);
 }
 
 .container {
-  background-color: coral;
-  display: flex;
-} 
+  /* display: inline-flex; Se ajusta al ancho de los items */
+  display: flex; /* Se ajusta al espacio disponible - Es el más común de usar */ 
+  flex-direction: row; /* Éste es el valor por default */
+  /* flex-direction: row-reverse; */ /* Derecha a izquierda */
+  /* flex-direction: column; */ /* Abajo hacia arriba */
+  /* flex-direction: column-reverse; */ /* Arriba hacia abajo */
+
+  justify-content: start; /* Alinea a la izquierda */
+  justify-content: end; /* Alinea a la derecha */
+  justify-content: center; /* Alinea al centro */
+  justify-content: space-around; /* Asigna espacio alrededor de cada elemento */
+  justify-content: space-between; /* Asigna espacio entra cada elemento */
+  justify-content: space-evenly; /* Asigna espacio entre los elementos y el contenedor */
+
+  background-color: rgb(135, 190, 118);
+}
 
 .item {
   width: 100px;
@@ -22,6 +36,6 @@ body {
   font-size: 24px;
   font-weight: bold;
   padding-top: 32px;
-  border: 1px solid black;
+  border: 1px solid rgb(97, 34, 14);
 }
 
