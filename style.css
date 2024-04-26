@@ -11,19 +11,34 @@ body {
 }
 
 .container {
+
+  height: 500px; /* Damos altura para probar align-items */
+
+  display: flex; /* Se ajusta al espacio disponible - Es el más común de usar */
   /* display: inline-flex; Se ajusta al ancho de los items */
-  display: flex; /* Se ajusta al espacio disponible - Es el más común de usar */ 
-  flex-direction: row; /* Éste es el valor por default */
+
+
+  /* align-items: stretch; */ /* Crece en la altura los elementos en espacio disponible. Los items no deben tener alto definido */
+  /* align-items: center; */ /* Alinea el centro */
+  /* align-items: flex-end; */ /* Alinea hacia abajo */
+  /* align-items: flex-start; */ /* Alinea hacia arriba */
+  /* align-items: baseline; */ /* Alinea los items en función de la línea base del texto que contienen. Independientemente del tamaño del texto, ubicación del contenido y altura del item */
+
+  /* flex-direction: row; */ /* Éste es el valor por default */
   /* flex-direction: row-reverse; */ /* Derecha a izquierda */
   /* flex-direction: column; */ /* Abajo hacia arriba */
   /* flex-direction: column-reverse; */ /* Arriba hacia abajo */
 
-  justify-content: start; /* Alinea a la izquierda */
-  justify-content: end; /* Alinea a la derecha */
-  justify-content: center; /* Alinea al centro */
-  justify-content: space-around; /* Asigna espacio alrededor de cada elemento */
-  justify-content: space-between; /* Asigna espacio entra cada elemento */
-  justify-content: space-evenly; /* Asigna espacio entre los elementos y el contenedor */
+
+  /* justify-content: start; */ /* Alinea a la izquierda */
+  /* justify-content: end; */ /* Alinea a la derecha */
+  /* justify-content: center; */ /* Alinea al centro */
+  /* justify-content: space-around; */ /* Asigna espacio alrededor de cada elemento */
+  /* justify-content: space-between; */ /* Asigna espacio entra cada elemento */
+  /* justify-content: space-evenly; */ /* Asigna espacio entre los elementos y el contenedor */
+  align-items: center; 
+  flex-direction: row-reverse;
+  justify-content: center;
 
   background-color: rgb(135, 190, 118);
 }
@@ -39,3 +54,33 @@ body {
   border: 1px solid rgb(97, 34, 14);
 }
 
+/* Vamos a usar pseudoclases para seleccionar los items individualmente */
+
+/* .item:nth-child(1) {
+  background-color: rgb(47, 76, 42);
+  font-size: 80px;
+  padding-top: 80px;
+  height: 100px;
+  flex-direction: ce;
+}
+
+.item:nth-child(2) {
+  background-color: rgb(60, 100, 53);
+  font-size: 40px;
+  padding-top: 40px;
+  height: 400px
+}
+
+.item:nth-child(3) {
+  background-color: rgb(72, 123, 62);
+  font-size: 100px;
+  padding-top: 100px;
+  height: 100px; 
+}
+
+.item:nth-child(4) {
+  background-color: rgb(87, 156, 75);
+  font-size: 20px;
+  padding-top: 20px;
+  height: 200px;
+} */
