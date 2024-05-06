@@ -12,8 +12,6 @@ body {
 
 .container {
 
-  height: 500px; /* Damos altura para probar align-items */
-
   display: flex; /* Se ajusta al espacio disponible - Es el más común de usar */
   /* display: inline-flex; Se ajusta al ancho de los items */
 
@@ -36,12 +34,33 @@ body {
   /* justify-content: space-around; */ /* Asigna espacio alrededor de cada elemento */
   /* justify-content: space-between; */ /* Asigna espacio entra cada elemento */
   /* justify-content: space-evenly; */ /* Asigna espacio entre los elementos y el contenedor */
-  align-items: center; 
-  flex-direction: row-reverse;
-  justify-content: center;
+  /* align-items: center; */
+  /* flex-direction: row-reverse; */
+  /* justify-content: center;  */
+
+  width: 350px;
+  height: 500px; /* Damos altura para probar align-items */
+
+  /* flex-wrap: nowrap; */ /* Este es el valor por default. Los items se ajustan al ancho del contenedor */
+  flex-wrap: wrap; /* Esto permite tener multiples líneas, si los items no caben en el contenedor, dará un salto de línea */
+
+  align-content: normal; /* Valor por default */
+  align-content: flex-start; /* Ajusta las líneas al inicio del eje transversal */
+  align-content: flex-end; /* Ajusta las líneas al final del eje transversal */
+  align-content: center; /* Ajusta las líneas al centro del eje transversal */
+  align-content: space-around; /* Distribuye el espacio alrededor de cada línea */
+  align-content: space-between; /* Distribuye el espacio proporcional a cada línea. Sin considerar al contenedor */
+  align-content: space-evenly; /* Distribuye el espacio proporcionalmente entre las líneas y el contenedor. */
+  align-content: stretch; /* Estiran el alto de los items sobre el eje transversal. Los items no deben tener un alto definido */
+
+  align-content: space-evenly;
+  justify-content: space-between;
+  align-content: space-between;
 
   background-color: rgb(135, 190, 118);
+
 }
+
 
 .item {
   width: 100px;
