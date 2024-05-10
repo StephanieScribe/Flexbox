@@ -5,33 +5,49 @@ body {
 }
 
 .container {
-  display: flex; /* Esto habilita las propiedades de Flexbox */
-  flex-direction: row; /* Este es el valor por default */
-  flex-direction: column; /* Cambia de dirección el eje principal */
   display: flex;
   background-color: rgb(135, 190, 118);
 }
 
 /* Propiedades de Flexbox para los Items
 
+  + Flex-Grow -> Esta propiedad ajuste el factor de crecimiento de los elementos, en función del espacio disponible. El valor por default es 'auto'.
 
-  + flex-basis -> Tamaño del main size del elemento. Es como un 'width' ncho de base del elemento. ->
-
-    Cuando flex-direction: row / row reverse -> flex basics = ancho
-    Cuando flex-direction: column / column-reverse -> felx basis = alto 
-
-    Flex-Basis es relativo al espacio disponible del contenedor. Si no hay espacio suficiente los elementos no crecerán más allá.
-
-    Si tengo flex-basis declarado, el width/height no funciona de acuerdo al contexto de dirección de eje principal.
-
+  Esta propiedad recibe valores numéricos 1, 2, 3, 4... El número que coloquemos es el factor de crecimiento.
 */
 
 .item {
-  flex-basis: 100px;
-  heigth: 500px;
+  flex-grow: auto; /* Este es el valor por default */
+  flex-grow: 1; /* Va a hacer que todo los items crezcan con el mismo factor */
+  width: 200px;
+
   background-color: burlywood;
   text-align: center;
   font-size: 24px;
   font-weight: bold;
   border: 1px solid rgb(97, 34, 14);
+}
+
+.cuchurrumino {
+  flex-grow: 10; /* El item con esta clase crece con un factor de 2 */
+}
+
+.Gato1 {
+  flex-grow: 10;
+  background-color: chocolate;
+}
+
+.Gato2 {
+  flex-grow: 6;
+  background-color: coral;
+}
+
+.Gato3 {
+  flex-grow: 4;
+  background-color: darkorange;
+}
+
+.Gato4 {
+  flex-grow: 1;
+  background-color: darksalmon;
 }
