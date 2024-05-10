@@ -1,105 +1,37 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 body {
   background-color: rgb(224, 206, 200);
   font-family: sans-serif;
-  color: rgb(99, 43, 26);
+  color: rgb(94, 34, 16);
 }
 
 .container {
-
-  display: flex; /* Se ajusta al espacio disponible - Es el más común de usar */
-  /* display: inline-flex; Se ajusta al ancho de los items */
-
-
-  /* align-items: stretch; */ /* Crece en la altura los elementos en espacio disponible. Los items no deben tener alto definido */
-  /* align-items: center; */ /* Alinea el centro */
-  /* align-items: flex-end; */ /* Alinea hacia abajo */
-  /* align-items: flex-start; */ /* Alinea hacia arriba */
-  /* align-items: baseline; */ /* Alinea los items en función de la línea base del texto que contienen. Independientemente del tamaño del texto, ubicación del contenido y altura del item */
-
-  /* flex-direction: row; */ /* Éste es el valor por default */
-  /* flex-direction: row-reverse; */ /* Derecha a izquierda */
-  /* flex-direction: column; */ /* Abajo hacia arriba */
-  /* flex-direction: column-reverse; */ /* Arriba hacia abajo */
-
-
-  /* justify-content: start; */ /* Alinea a la izquierda */
-  /* justify-content: end; */ /* Alinea a la derecha */
-  /* justify-content: center; */ /* Alinea al centro */
-  /* justify-content: space-around; */ /* Asigna espacio alrededor de cada elemento */
-  /* justify-content: space-between; */ /* Asigna espacio entra cada elemento */
-  /* justify-content: space-evenly; */ /* Asigna espacio entre los elementos y el contenedor */
-  /* align-items: center; */
-  /* flex-direction: row-reverse; */
-  /* justify-content: center;  */
-
-  width: 350px;
-  height: 500px; /* Damos altura para probar align-items */
-
-  /* flex-wrap: nowrap; */ /* Este es el valor por default. Los items se ajustan al ancho del contenedor */
-  flex-wrap: wrap; /* Esto permite tener multiples líneas, si los items no caben en el contenedor, dará un salto de línea */
-
-  align-content: normal; /* Valor por default */
-  align-content: flex-start; /* Ajusta las líneas al inicio del eje transversal */
-  align-content: flex-end; /* Ajusta las líneas al final del eje transversal */
-  align-content: center; /* Ajusta las líneas al centro del eje transversal */
-  align-content: space-around; /* Distribuye el espacio alrededor de cada línea */
-  align-content: space-between; /* Distribuye el espacio proporcional a cada línea. Sin considerar al contenedor */
-  align-content: space-evenly; /* Distribuye el espacio proporcionalmente entre las líneas y el contenedor. */
-  align-content: stretch; /* Estiran el alto de los items sobre el eje transversal. Los items no deben tener un alto definido */
-
-  align-content: space-evenly;
-  justify-content: space-between;
-  align-content: space-between;
-
+  display: flex; /* Esto habilita las propiedades de Flexbox */
+  flex-direction: row; /* Este es el valor por default */
+  flex-direction: column; /* Cambia de dirección el eje principal */
+  display: flex;
   background-color: rgb(135, 190, 118);
-
 }
 
+/* Propiedades de Flexbox para los Items
+
+
+  + flex-basis -> Tamaño del main size del elemento. Es como un 'width' ncho de base del elemento. ->
+
+    Cuando flex-direction: row / row reverse -> flex basics = ancho
+    Cuando flex-direction: column / column-reverse -> felx basis = alto 
+
+    Flex-Basis es relativo al espacio disponible del contenedor. Si no hay espacio suficiente los elementos no crecerán más allá.
+
+    Si tengo flex-basis declarado, el width/height no funciona de acuerdo al contexto de dirección de eje principal.
+
+*/
 
 .item {
-  width: 100px;
-  height: 100px;
+  flex-basis: 100px;
+  heigth: 500px;
   background-color: burlywood;
   text-align: center;
   font-size: 24px;
   font-weight: bold;
-  padding-top: 32px;
   border: 1px solid rgb(97, 34, 14);
 }
-
-/* Vamos a usar pseudoclases para seleccionar los items individualmente */
-
-/* .item:nth-child(1) {
-  background-color: rgb(47, 76, 42);
-  font-size: 80px;
-  padding-top: 80px;
-  height: 100px;
-  flex-direction: ce;
-}
-
-.item:nth-child(2) {
-  background-color: rgb(60, 100, 53);
-  font-size: 40px;
-  padding-top: 40px;
-  height: 400px
-}
-
-.item:nth-child(3) {
-  background-color: rgb(72, 123, 62);
-  font-size: 100px;
-  padding-top: 100px;
-  height: 100px; 
-}
-
-.item:nth-child(4) {
-  background-color: rgb(87, 156, 75);
-  font-size: 20px;
-  padding-top: 20px;
-  height: 200px;
-} */
