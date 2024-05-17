@@ -10,32 +10,13 @@ body {
   color: rgb(94, 34, 16);
 }
 
-/* 
-
-Gap -> Espacio entre los elementos
-
-Recibe valores en números con unidades relativas o absolutas.
-
-Esta propiedad se pasa al contenedor
-
-*/
-
 .container {
-  width: 500px;
-  background-color: burlywood;
-  /* gap: 24px; */ /* Espacio entre los elementos */
-  /* gap: 3rem; */ /* Unidades absolutas: px o relativas: em o rem */
-
+  height: 700px;
   display: flex;
-  flex-wrap: wrap;
+  background-color: burlywood;
 
-  row-gap: 32px; /* Espacio entre los elementos en la horizontal */
-
-  column-gap: 16px; /* Espacio entre los elementos en la vertical */
-
-  gap: 4px 32px; /* Con dos valores, el primero es para espacio horizontal y el segundo con el espacio vertical */
-
-  background-color: cadetblue;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .item {
@@ -47,4 +28,21 @@ Esta propiedad se pasa al contenedor
   font-size: 24px;
   font-weight: bold;
   border: 1px solid rgb(0, 147, 22);
+}
+
+/*
+  align-self -> Se pasa a uno o varios elementos en particular
+
+  Va a alinear en el eje transversal a esos elementos únicamente. Y sobre escribir la propiedad de align-items y su valor si se ha declarado en el contenedor.
+
+  Recibe los mismos valores que align-items::after
+
+  start, end, center, stretch, baseline.
+
+  flex start, flex end
+*/
+
+.solito {
+  align-self: flex-end;
+  /* height: auto; */
 }
