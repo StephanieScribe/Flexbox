@@ -1,53 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: rgb(224, 206, 200);
   font-family: sans-serif;
   color: rgb(94, 34, 16);
 }
 
-.container {
-  display: flex;
-  background-color: rgb(135, 190, 118);
-}
+/* 
 
-/* Propiedades de Flexbox para los Items
+Gap -> Espacio entre los elementos
 
-  + Flex-Grow -> Esta propiedad ajuste el factor de crecimiento de los elementos, en función del espacio disponible. El valor por default es 'auto'.
+Recibe valores en números con unidades relativas o absolutas.
 
-  Esta propiedad recibe valores numéricos 1, 2, 3, 4... El número que coloquemos es el factor de crecimiento.
+Esta propiedad se pasa al contenedor
+
 */
 
-.item {
-  flex-grow: auto; /* Este es el valor por default */
-  flex-grow: 1; /* Va a hacer que todo los items crezcan con el mismo factor */
-  width: 200px;
-
+.container {
+  width: 500px;
   background-color: burlywood;
+  /* gap: 24px; */ /* Espacio entre los elementos */
+  /* gap: 3rem; */ /* Unidades absolutas: px o relativas: em o rem */
+
+  display: flex;
+  flex-wrap: wrap;
+
+  row-gap: 32px; /* Espacio entre los elementos en la horizontal */
+
+  column-gap: 16px; /* Espacio entre los elementos en la vertical */
+
+  gap: 4px 32px; /* Con dos valores, el primero es para espacio horizontal y el segundo con el espacio vertical */
+
+  background-color: cadetblue;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+
+  background-color: darkkhaki;
   text-align: center;
   font-size: 24px;
   font-weight: bold;
-  border: 1px solid rgb(97, 34, 14);
-}
-
-.cuchurrumino {
-  flex-grow: 10; /* El item con esta clase crece con un factor de 2 */
-}
-
-.Gato1 {
-  flex-grow: 10;
-  background-color: chocolate;
-}
-
-.Gato2 {
-  flex-grow: 6;
-  background-color: coral;
-}
-
-.Gato3 {
-  flex-grow: 4;
-  background-color: darkorange;
-}
-
-.Gato4 {
-  flex-grow: 1;
-  background-color: darksalmon;
+  border: 1px solid rgb(0, 147, 22);
 }
